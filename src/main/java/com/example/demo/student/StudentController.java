@@ -3,6 +3,8 @@ import java.util.List;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,10 +24,14 @@ public class StudentController {
     
     @GetMapping
     public List<Student> getStudent() {
-        return this.studentService.getStudent();
+        return studentService.getStudent();
     } 
 
-    public void addStudent() {
+
+    @PostMapping
+    public void registerStudent(@RequestBody Student student) {
+        studentService.addNewStudent(student);
+    
 
     } 
 

@@ -24,7 +24,7 @@ public class DemoApplication {
 	public List<Student> hello(){
 		return List.of(
 			new Student(
-				1L,"Paul","paul@gmail.com",LocalDate.of(1990,Month.JANUARY,6),33
+				1L,"Paul","paul@gmail.com",LocalDate.of(1990,Month.JANUARY,6)
 			)
 		);
 	}
